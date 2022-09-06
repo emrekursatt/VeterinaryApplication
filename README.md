@@ -18,7 +18,7 @@ Spring Boot + Spring MVC + Spring Security + JPA/Hibernate + MySQL + Maven + HTM
 
 ### UML DiAGRAMI
 
-<img height="400" src="D:\GitHub Repoları\VeterinaryApplication\src\main\java\com\example\veterinaryapp\UML.PNG" title="UML" width="1250"/>
+![UML](https://user-images.githubusercontent.com/104613938/188704952-d5bcaf47-a0b5-4783-982b-0d6ba38f1d58.PNG)
 
 ### Projeyi Çalıştırma
 
