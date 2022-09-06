@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Create Animal </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body style="background-color: lightgray">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="/index">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/dashboard">Dashboard  <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/owner/owners">Animal Owner List | </a>
+            <a class="nav-item nav-link" href="/owner/createowner">Create Animal Owner |</a>
+            <a class="nav-item nav-link" href="/animal/animals">Animal List |</a>
+            <a class="nav-item nav-link" href="/animal/create">Animal Create |</a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5">
+  <h2>Create Animal Owner</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form  th:action="@{/animal/create}" th:object="${animals}" method="post"  >
+        <div class="row">
+
+            <div class="form-group col-md-6">
+            <label for="name" class="col-form-label">Name</label>
+            <input type="text" th:field="*{animalName}" class="form-control" id="name" placeholder="Animal Name">
+            <span th:if="${#fields.hasErrors('animalName')}" th:errors="*{animalName}" class="text-danger"></span>
+          </div>
+
+            <div class="form-group col-md-6">
+            <label for="animalBreed" class="col-form-label">Animal Breed</label>
+            <input type="text" th:field="*{animalBreed}" class="form-control" id="animalBreed" placeholder="Animal Breed">
+            <span th:if="${#fields.hasErrors('animalBreed')}" th:errors="*{animalBreed}" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="animalType" class="col-form-label">Animal Type</label>
+              <input type="text" th:field="*{animalType}" class="form-control" id="animalType" placeholder="Animal Type">
+              <span th:if="${#fields.hasErrors('animalType')}" th:errors="*{animalType}" class="text-danger"></span>
+               </div>
+            <div class="form-group col-md-6">
+                <label for="animalAge" class="col-form-label">Animal Age</label>
+                <input type="number" step="0.1"  required th:field="*{animalAge}" class="form-control" id="animalAge" placeholder="Animal Age">
+                <span th:if="${#fields.hasErrors('animalAge')}" th:errors="*{animalAge}" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="animalDescription" class="col-form-label ">Animal Desctription</label>
+                <input type="text" th:field="*{animalDescription}" class="form-control" id="animalDescription"  placeholder="Animal Desctription">
+                <span th:if="${#fields.hasErrors('animalDescription')}" th:errors="*{animalDescription}" class="text-danger"></span>
+            </div>
+
+            <div class="form-group col-md-6">
+            <label for="animalOwners" class="col-form-label">Animal Owner</label>
+            <select  th:field="*{animalOwners}" class="form-control" id="animalOwners" required  placeholder ="Animal Owner">
+                <th:block th:each="ow : ${animalOwnersList}">
+                <option th:text="${ow.ownerFullName}" th:value="${ow.id}" />
+                </th:block>
+            </select>
+
+        </div>
+            </div>
+
+          <div class="row">
+              <div class="col-md-6 mt-5">
+                  <input type="submit" class="btn btn-primary" value="Create Animal Owner">
+              </div>
+             </div>
+           </form>
+         </div>
+       </div>
+</div>
+     </body>
+     </html>

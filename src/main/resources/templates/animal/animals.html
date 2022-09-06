@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Veterinary Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body style="background-color: lightgray">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/index">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/dashboard">Dashboard  <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/owner/owners">Animal Owner List | </a>
+      <a class="nav-item nav-link" href="/owner/createowner">Create Animal Owner |</a>
+      <a class="nav-item nav-link" href="/animal/animals">Animal List |</a>
+      <a class="nav-item nav-link" href="/animal/create">Animal Create |</a>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <h1 class="my-5" th:align="center">ANİMAL  LİST</h1>
+</div>
+<div class="container my-5">
+  <h2 th:align="center">Search for Animal</h2>
+  <form th:align="center" action="#"
+        th:action="@{/animal/search}"
+        method="get">
+    <input  type="search" name="animalName"  th:value="${animalName}" placeholder="Search for Animal..." size="30">
+    <button type="submit" class="btn btn-info">Search</button>
+    <button type="reset" class="btn btn-info">Reset</button>
+  </form>
+
+</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Animal Name</th>
+    <th>Animal Breed</th>
+    <th>Animal Type</th>
+    <th>Animal Age</th>
+    <th>Animal Description</th>
+    <th>Animal Owner</th>
+    <th>Edit</th>
+    <th>Delete</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="an: ${animalsList}">
+    <td th:text="${an.animalName}"></td>
+    <td th:text="${an.animalBreed}"></td>
+    <td th:text="${an.animalType}"></td>
+    <td th:text="${an.animalAge}"></td>
+    <td th:text="${an.animalDescription}"></td>
+    <td th:text="${an.animalOwners.ownerFullName}"></td>
+    <td><a th:href="@{/animal/update/{id}(id=${an.id})}" class="btn btn-primary"><i class="fas fa-user-edit"></i></a></td>
+    <td><a th:href="@{/animal/delete/{id}(id=${an.id})}" class="btn btn-danger"><i class="fa fa-user-times"></i></a></td>
+
+
+  </tr>
+  </tbody>
+</table>
+<p><a href="create"  class="btn btn-primary"><i class="fas fa-user-plus"></i></a> </p>
+
+
+</div>
+
+
+</div>
+</body>
+</html>
+
