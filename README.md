@@ -87,9 +87,9 @@ AnimalOwners ve Animals arasında OneToMany ve MantyToOne ilişkisi vardır çü
 ama hayvanlar sadece tek bir kullanıcıya ait olabilir.
 
 ## Proje Hakkında
-
+- Sisteme giriş yapmadan diğer sayfalara ulaşılamamaktadır, direkt olarak login sayfasına yönlendirir.
 - Proje başlatıldıktan sonra admin yetkisine sahip admin kullanıcısı ve 
-user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan TÜM kayıtlar veritabanında algoritme
+user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan tüm kayıtlar veritabanında algoritma
 ile saklanır.
 
 Bu bilgileri DataLoader'de bulabilirsiniz -->
