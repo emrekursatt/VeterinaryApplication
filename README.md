@@ -18,7 +18,7 @@ Spring Boot + Spring MVC + Spring Security + JPA/Hibernate + MySQL + Maven + HTM
 
 ### UML DiAGRAMI
 
-<img height="400" src="D:\GitHub Repoları\VeterinaryApplication\src\main\java\com\example\veterinaryapp\UML.PNG" title="UML" width="1250"/>
+![UML](https://user-images.githubusercontent.com/104613938/188704952-d5bcaf47-a0b5-4783-982b-0d6ba38f1d58.PNG)
 
 ### Projeyi Çalıştırma
 
@@ -89,17 +89,34 @@ ama hayvanlar sadece tek bir kullanıcıya ait olabilir.
 ## Proje Hakkında
 
 - Proje başlatıldıktan sonra admin yetkisine sahip admin kullanıcısı ve 
-user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan kayıtlar veritabanında algoritme
+user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan TÜM kayıtlar veritabanında algoritme
 ile saklanır.
+
+Bu bilgileri DataLoader'de bulabilirsiniz -->
+
+[https://github.com/emrekursatt/VeterinaryApplication/blob/main/src/main/java/com/example/veterinaryapp/Config/DataLoader.java](url)
     
-resim ekle-userler
+![Userler](https://user-images.githubusercontent.com/104613938/188705156-05d08853-75c8-4938-ab1c-f6022bee5826.PNG)
     
     username = admin username = user
     password = admin password = user
+
 User sistemdeki tüm işlemleri yapabilirken ( Ekleme, çıkarma,arama,düzenleme) silme işlemini yapamamaktadır.
 Admin user kullanıcısına ek olarak silme işlemide yapabilmekte.
 
-- Sisteme default olarak Hayvan sahibi ve hayvanlar eklenmiştir.
+- Sisteme default olarak hayvan sahibi ve hayvanlar eklenmiştir.
 
-resim ekle-ownerler
-resim ekle-animallar
+![ownerlar](https://user-images.githubusercontent.com/104613938/188705188-abd0ba1b-9c9a-401e-8788-32abc65fe5b4.PNG)
+
+![Animalalr](https://user-images.githubusercontent.com/104613938/188705218-ecb7852d-5766-4038-9fd3-a38ccb1839f6.PNG)
+
+### Sistemden Ekran Görüntüleri
+
+
+![AnimalList](https://user-images.githubusercontent.com/104613938/188706629-827623ea-24fd-4199-8b1d-05b203b79487.PNG)
+![İndex](https://user-images.githubusercontent.com/104613938/188706633-7ee912fe-e34c-4625-8c25-97a3b714e508.PNG)
+![Register](https://user-images.githubusercontent.com/104613938/188706635-fe816ec0-7940-4dad-8437-8924024da3ea.PNG)
+![Login](https://user-images.githubusercontent.com/104613938/188706636-bfe71759-1d37-439a-a9ae-0c4b80efb9e3.PNG)
+![Dashboard](https://user-images.githubusercontent.com/104613938/188706639-f8d49ee1-0717-46ce-8479-034f14a32f40.PNG)
+![CrateOwner](https://user-images.githubusercontent.com/104613938/188706641-a1fc2472-12dd-4d28-9e2c-627ab3ef6185.PNG)
+![OwnerList](https://user-images.githubusercontent.com/104613938/188706643-8ae350cd-499a-4146-997f-36e42408e27f.PNG)
