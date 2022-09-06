@@ -89,17 +89,21 @@ ama hayvanlar sadece tek bir kullanıcıya ait olabilir.
 ## Proje Hakkında
 
 - Proje başlatıldıktan sonra admin yetkisine sahip admin kullanıcısı ve 
-user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan kayıtlar veritabanında algoritme
+user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan TÜM kayıtlar veritabanında algoritme
 ile saklanır.
+
+
     
-resim ekle-userler
+![Userler](https://user-images.githubusercontent.com/104613938/188705156-05d08853-75c8-4938-ab1c-f6022bee5826.PNG)
     
     username = admin username = user
     password = admin password = user
-User sistemdeki tüm işlemleri yapabilirken ( Ekleme, çıkarma,arama,düzenleme) silme işlemini yapamamaktadır.
+U
+ser sistemdeki tüm işlemleri yapabilirken ( Ekleme, çıkarma,arama,düzenleme) silme işlemini yapamamaktadır.
 Admin user kullanıcısına ek olarak silme işlemide yapabilmekte.
 
 - Sisteme default olarak Hayvan sahibi ve hayvanlar eklenmiştir.
 
-resim ekle-ownerler
+![ownerlar](https://user-images.githubusercontent.com/104613938/188705188-abd0ba1b-9c9a-401e-8788-32abc65fe5b4.PNG)
 resim ekle-animallar
+![Animalalr](https://user-images.githubusercontent.com/104613938/188705218-ecb7852d-5766-4038-9fd3-a38ccb1839f6.PNG)
