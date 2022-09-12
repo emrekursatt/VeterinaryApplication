@@ -22,9 +22,9 @@ Spring Boot + Spring MVC + Spring Security + JPA/Hibernate + MySQL + Maven + HTM
 
 ### Projeyi Çalıştırma
 
-JPA/Hibernate ve maven ile geliştirilmiş Spring Boot projemizde herhangi bir tablo oluşturmanıza gerek yok.
+JPA/Hibernate ve Maven ile geliştirilmiş Spring Boot projemizde herhangi bir tablo oluşturmanıza gerek yok.
 
-Bir schema oluşturmalısınız ve oluştuduğunuz veritabanı ismini   "application.properties" dosyasındaki ##Database Configuration altında bulunan 
+Bir schema oluşturmalısınız ve oluştuduğunuz veritabanı ismini "application.properties" dosyasındaki ##Database Configuration altında bulunan;
 
     spring.datasource.url=jdbc:mysql://localhost:3306/veterinary?serverTimezone=Turkey
     
@@ -33,35 +33,35 @@ Bir schema oluşturmalısınız ve oluştuduğunuz veritabanı ismini   "applica
     spring.datasource.password=12345`
 
 
-**veterinary** = kısmını kendi veritabanı isminizi girmelisiniz. (?serverTimezone=Turkey bazı bilgisayalrda problem olduğu için eklenmiştir değiştirmeyiniz.)
+**veterinary** = kısmına kendi veritabanı isminizi girmelisiniz. (?serverTimezone=Turkey bazı bilgisayalarda problem olduğu için eklenmiştir,  değiştirmeyiniz.)
 **username** =   veritabanı username
-**password** =   veritabanı şifre bilgilerinide güncelledikten sonra herşey hazır demektir.
+**password** =   veritabanı şifre bilgilerini de güncelledikten sonra her şey hazır demektir.
 
 Projeyi isterseniz herhangi bir IDE yardımıyla çalıştırabilirsiniz.
 
-IDE üzerinden çalıştırmak istemiyorsanız eğer consol üzerinden çalıştırabilirsinz. Konsol üzerinden çalıştırmak için;
+IDE üzerinden çalıştırmak istemiyorsanız, consol üzerinden de çalıştırabilirsinz. Konsol üzerinden çalıştırmak için;
 
-İlk olarak maven kurulumunu yapmanız gerekiyor.
+İlk olarak Maven kurulumunu yapmanız gerekiyor.
 
 [https://maven.apache.org/download.cgi ](https://maven.apache.org/download.cgi) sitesinden indirerek kurulumu gerçekleştiriniz.
 
-Gerekli maven kurulumlarını yaptıktan sonra konsolu açınız ve 
+Gerekli Maven kurulumlarını yaptıktan sonra konsolu açınız ve 
 
     cd C:\***\VeterinaryApplication 
 
-cd komutu ile projenin olduğu dosyaya erişin.Daha sonra sırasıyla aşşağıdaki komutu çalıştırarak doğru dizinde olduğunuzu doğrulayın.
+cd komutu ile projenin olduğu dosyaya erişin. Daha sonra sırasıyla aşağıdaki komutu çalıştırarak doğru dizinde olduğunuzu kontrol edin.
 
     dir 
 
-Daha sonra projeyi çalıştırmak için  önce
+Daha sonra projeyi çalıştırmak için  önce aşağıdaki komutu çalıştırınız
     
     mvn clean install
 
-**BUILD SUCCESS** ifadesini gördükten sonra
+**BUILD SUCCESS** ifadesini gördükten sonra;
     
     mvn spring-boot:run 
 
-komutunu çalıştırınız ve localhost:8080 adresine giderek projeye erişebilirsiniz.
+komutunu çalıştırınız. localhost:8080 adresine giderek projeye erişebilirsiniz.
 
 
 ### Sistemdeki Paketler
@@ -83,13 +83,13 @@ komutunu çalıştırınız ve localhost:8080 adresine giderek projeye erişebil
 - Role         ---> Rolname bilgisi
 
 User ve role arasında MantyToMany ilişkisi vardır çünkü kullanıcı birden fala role sahip olabilir.
-AnimalOwners ve Animals arasında OneToMany ve MantyToOne ilişkisi vardır çünkü bir hayvan sahibi n adet hayvana sahip olabilir
+AnimalOwners ve Animals arasında OneToMany ve MantyToOne ilişkisi vardır çünkü bir hayvan sahibi n adet hayvana sahip olabilir, 
 ama hayvanlar sadece tek bir kullanıcıya ait olabilir.
 
 ## Proje Hakkında
-
+- Sisteme giriş yapmadan diğer sayfalara ulaşılamamaktadır, direkt olarak login sayfasına yönlendirir.
 - Proje başlatıldıktan sonra admin yetkisine sahip admin kullanıcısı ve 
-user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan TÜM kayıtlar veritabanında algoritme
+user yetkisine sahip user kullanıcısı oluşur ve sisteme yapılan tüm kayıtlar veritabanında algoritma
 ile saklanır.
 
 Bu bilgileri DataLoader'de bulabilirsiniz -->
@@ -101,8 +101,8 @@ Bu bilgileri DataLoader'de bulabilirsiniz -->
     username = admin username = user
     password = admin password = user
 
-User sistemdeki tüm işlemleri yapabilirken ( Ekleme, çıkarma,arama,düzenleme) silme işlemini yapamamaktadır.
-Admin user kullanıcısına ek olarak silme işlemide yapabilmekte.
+User sistemdeki tüm işlemleri yapabilirken ( Ekleme, çıkarma, arama, düzenleme), silme işlemini yapamamaktadır.
+Admin user kullanıcısına ek olarak silme işlemini de yapabilmekte.
 
 - Sisteme default olarak hayvan sahibi ve hayvanlar eklenmiştir.
 
