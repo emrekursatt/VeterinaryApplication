@@ -65,5 +65,9 @@ public class HomeController {
 
         return "login";
     }
+    @GetMapping("/403")
+    public String accessDenied() {
+        return "403";
+    }
 
 }

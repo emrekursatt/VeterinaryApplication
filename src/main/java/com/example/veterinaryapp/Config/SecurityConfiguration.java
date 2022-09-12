@@ -46,6 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .antMatchers("/register", "/login", "/index", "/")
                 .permitAll();
+
         http.authorizeRequests().antMatchers("/actuator/**").hasRole("ADMIN");
         http.authorizeRequests().anyRequest().authenticated();
 
@@ -58,8 +59,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .defaultSuccessUrl("/dashboard.html", true)
-                .and().logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index");
+                .and()
+                .logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/index")
+                .and()
+                .exceptionHandling().accessDeniedPage("/403");
 
     }
 
