@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 
 
 @Controller
-public class HomeController {
+public class homeController {
 
     @Autowired
     private IUserService iUserService;

@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Component
 @AllArgsConstructor
-public class InitializerRunner implements CommandLineRunner {
+public class initializerRunner implements CommandLineRunner {
 
-    private static final Logger logger = LoggerFactory.getLogger(InitializerRunner.class);
+    private static final Logger logger = LoggerFactory.getLogger(initializerRunner.class);
     @Autowired
     private final IAnimalOwnersRepository iAnimalOwnersRepository;
 

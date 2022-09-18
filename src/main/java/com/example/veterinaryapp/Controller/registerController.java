@@ -18,7 +18,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Controller
-public class RegisterController {
+public class registerController {
     @Autowired
     IUserService iUserService;
 

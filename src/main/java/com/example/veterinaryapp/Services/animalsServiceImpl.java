@@ -4,7 +4,6 @@ import com.example.veterinaryapp.Models.Animals;
 import com.example.veterinaryapp.Repository.IAnimalsRepository;
 import com.example.veterinaryapp.Services.Interfeace.IAnimalsService;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;

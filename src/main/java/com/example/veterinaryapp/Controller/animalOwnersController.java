@@ -19,7 +19,7 @@ import java.util.Optional;
 @Controller // Spring MVC  siniflarında kullanılır.
 @RequiredArgsConstructor
 @RequestMapping("/owner")
-public class AnimalOwnersController {
+public class animalOwnersController {
 
 
     @Autowired

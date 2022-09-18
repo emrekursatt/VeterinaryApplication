@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service // Bir beaninin business katmanında çalışacak bir bean olduğunu belirtir.
 @AllArgsConstructor
 @Transactional
-public class AnimalOwnersServiceImpl implements IAnimalOwnersService {
+public class animalOwnersServiceImpl implements IAnimalOwnersService {
 
     @Autowired
     private final IAnimalOwnersRepository iAnimalOwnersRepository;

@@ -20,7 +20,7 @@ import java.util.Optional;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/animal")
-public class AnimalsController {
+public class animalsController {
 
 
     @Autowired

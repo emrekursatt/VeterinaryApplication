@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Component
-public class DataLoader implements ApplicationRunner {
+public class dataLoader implements ApplicationRunner {
 
     @Autowired
     private IUserRepository iUserRepository;
@@ -24,7 +24,7 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public DataLoader(IUserRepository iUserRepository, IRoleRepository iRoleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public dataLoader(IUserRepository iUserRepository, IRoleRepository iRoleRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.iUserRepository = iUserRepository;
         this.iRoleRepository = iRoleRepository;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
