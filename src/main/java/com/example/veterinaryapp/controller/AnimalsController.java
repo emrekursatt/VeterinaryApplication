@@ -1,9 +1,9 @@
 package com.example.veterinaryapp.Controller;
 
-import com.example.veterinaryapp.Models.AnimalOwners;
-import com.example.veterinaryapp.Models.Animals;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalOwnersService;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalsService;
+import com.example.veterinaryapp.models.AnimalOwners;
+import com.example.veterinaryapp.models.Animals;
+import com.example.veterinaryapp.services.interfeace.IAnimalOwnersService;
+import com.example.veterinaryapp.services.interfeace.IAnimalsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

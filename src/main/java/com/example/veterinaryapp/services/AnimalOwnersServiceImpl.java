@@ -1,8 +1,8 @@
-package com.example.veterinaryapp.Services;
+package com.example.veterinaryapp.services;
 
-import com.example.veterinaryapp.Models.AnimalOwners;
-import com.example.veterinaryapp.Repository.IAnimalOwnersRepository;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalOwnersService;
+import com.example.veterinaryapp.models.AnimalOwners;
+import com.example.veterinaryapp.repository.IAnimalOwnersRepository;
+import com.example.veterinaryapp.services.interfeace.IAnimalOwnersService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service // Bir beaninin business katmanında çalışacak bir bean olduğunu belirtir.
 @AllArgsConstructor
 @Transactional
-public class animalOwnersServiceImpl implements IAnimalOwnersService {
+public class AnimalOwnersServiceImpl implements IAnimalOwnersService {
 
     @Autowired
     private final IAnimalOwnersRepository iAnimalOwnersRepository;

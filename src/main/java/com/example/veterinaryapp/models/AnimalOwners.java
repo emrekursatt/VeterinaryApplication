@@ -1,4 +1,4 @@
-package com.example.veterinaryapp.Models;
+package com.example.veterinaryapp.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,9 +1,9 @@
-package com.example.veterinaryapp.Utils;
+package com.example.veterinaryapp.utils;
 
-import com.example.veterinaryapp.Models.AnimalOwners;
-import com.example.veterinaryapp.Models.Animals;
-import com.example.veterinaryapp.Repository.IAnimalOwnersRepository;
-import com.example.veterinaryapp.Repository.IAnimalsRepository;
+import com.example.veterinaryapp.models.AnimalOwners;
+import com.example.veterinaryapp.models.Animals;
+import com.example.veterinaryapp.repository.IAnimalOwnersRepository;
+import com.example.veterinaryapp.repository.IAnimalsRepository;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Component
 @AllArgsConstructor
-public class initializerRunner implements CommandLineRunner {
+public class InitializerRunner implements CommandLineRunner {
 
-    private static final Logger logger = LoggerFactory.getLogger(initializerRunner.class);
+    private static final Logger logger = LoggerFactory.getLogger(InitializerRunner.class);
     @Autowired
     private final IAnimalOwnersRepository iAnimalOwnersRepository;
 

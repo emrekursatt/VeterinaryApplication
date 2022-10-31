@@ -1,9 +1,9 @@
 package com.example.veterinaryapp.Controller;
 
-import com.example.veterinaryapp.Models.User;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalOwnersService;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalsService;
-import com.example.veterinaryapp.Services.Interfeace.IUserService;
+import com.example.veterinaryapp.models.User;
+import com.example.veterinaryapp.services.interfeace.IAnimalOwnersService;
+import com.example.veterinaryapp.services.interfeace.IAnimalsService;
+import com.example.veterinaryapp.services.interfeace.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

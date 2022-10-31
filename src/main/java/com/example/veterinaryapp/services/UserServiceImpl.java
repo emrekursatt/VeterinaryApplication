@@ -1,12 +1,12 @@
-package com.example.veterinaryapp.Services;
+package com.example.veterinaryapp.services;
 
 
 
-import com.example.veterinaryapp.Models.Role;
-import com.example.veterinaryapp.Models.User;
-import com.example.veterinaryapp.Repository.IRoleRepository;
-import com.example.veterinaryapp.Repository.IUserRepository;
-import com.example.veterinaryapp.Services.Interfeace.IUserService;
+import com.example.veterinaryapp.models.Role;
+import com.example.veterinaryapp.models.User;
+import com.example.veterinaryapp.repository.IRoleRepository;
+import com.example.veterinaryapp.repository.IUserRepository;
+import com.example.veterinaryapp.services.interfeace.IUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

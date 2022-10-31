@@ -1,6 +1,6 @@
-package com.example.veterinaryapp.Services.Interfeace;
+package com.example.veterinaryapp.services.interfeace;
 
-import com.example.veterinaryapp.Models.AnimalOwners;
+import com.example.veterinaryapp.models.AnimalOwners;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 

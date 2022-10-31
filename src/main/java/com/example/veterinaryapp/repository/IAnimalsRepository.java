@@ -1,6 +1,6 @@
-package com.example.veterinaryapp.Repository;
+package com.example.veterinaryapp.repository;
 
-import com.example.veterinaryapp.Models.Animals;
+import com.example.veterinaryapp.models.Animals;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

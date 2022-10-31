@@ -1,8 +1,8 @@
-package com.example.veterinaryapp.Services;
+package com.example.veterinaryapp.services;
 
-import com.example.veterinaryapp.Models.Animals;
-import com.example.veterinaryapp.Repository.IAnimalsRepository;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalsService;
+import com.example.veterinaryapp.models.Animals;
+import com.example.veterinaryapp.repository.IAnimalsRepository;
+import com.example.veterinaryapp.services.interfeace.IAnimalsService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;

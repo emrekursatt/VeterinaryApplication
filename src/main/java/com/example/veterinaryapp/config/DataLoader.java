@@ -1,9 +1,9 @@
 package com.example.veterinaryapp.Config;
 
-import com.example.veterinaryapp.Models.Role;
-import com.example.veterinaryapp.Models.User;
-import com.example.veterinaryapp.Repository.IRoleRepository;
-import com.example.veterinaryapp.Repository.IUserRepository;
+import com.example.veterinaryapp.models.Role;
+import com.example.veterinaryapp.models.User;
+import com.example.veterinaryapp.repository.IRoleRepository;
+import com.example.veterinaryapp.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

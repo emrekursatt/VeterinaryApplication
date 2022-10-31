@@ -1,7 +1,7 @@
 package com.example.veterinaryapp.Controller;
 
-import com.example.veterinaryapp.Models.AnimalOwners;
-import com.example.veterinaryapp.Services.Interfeace.IAnimalOwnersService;
+import com.example.veterinaryapp.models.AnimalOwners;
+import com.example.veterinaryapp.services.interfeace.IAnimalOwnersService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

@@ -1,6 +1,6 @@
-package com.example.veterinaryapp.Services.Interfeace;
+package com.example.veterinaryapp.services.interfeace;
 
-import com.example.veterinaryapp.Models.Animals;
+import com.example.veterinaryapp.models.Animals;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
